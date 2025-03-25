@@ -85,14 +85,7 @@ const ExercisePage = () => {
 
   return (
     <MainSection>
-      <h1
-        onClick={() => {
-          console.log(data);
-          console.log(filteredData);
-        }}
-      >
-        Exercise Page
-      </h1>
+      <h1>Exercise Page</h1>
       <div className="div_searchField">
         <div className="searchField">
           <input

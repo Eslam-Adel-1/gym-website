@@ -46,11 +46,12 @@ export default SecondSection;
 const MainSection = styled.div`
   width: 100vw;
   height: 100vh;
-
+  margin: 30px 0px;
   .main-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 100%;
   }
   .container {
     flex: 0.6;
@@ -71,12 +72,18 @@ const MainSection = styled.div`
       border-radius: 30px;
       margin-top: 30px;
     }
+    h4 {
+      @media (min-width: 1440px) {
+        font-size: 3rem;
+      }
+    }
   }
   img {
     margin-right: 40px;
     flex: 0.4;
     object-fit: contain;
-    height: 500px;
+    width: 40%;
+    height: 100%;
     opacity: ${(props) => (props.intersect ? 1 : 0)};
     transition: all 900ms ease-in;
   }

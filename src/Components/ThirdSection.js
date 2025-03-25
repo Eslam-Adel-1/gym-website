@@ -27,30 +27,37 @@ const ThirdSection = () => {
 export default ThirdSection;
 
 const MainSection = styled.div`
-  width: 100vw;
-  height: 100vh;
   background-image: url(${smoke2});
   background-size: cover;
   background-repeat: no-repeat;
-  display: grid;
-  place-content: center;
-  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  @media (min-width: 1250px) {
+    padding: 0px;
+  }
   .first {
     margin-bottom: 50px;
-    margin-top: 70px;
+    margin-top: 50px;
     h1 {
       text-align: center;
-      font-size: 30px;
+      font-size: 50px;
       @import url("https://fonts.cdnfonts.com/css/outerspace-militia");
       font-family: "Outerspace Militia", sans-serif;
       color: whitesmoke;
+      @media (min-width: 1000px) {
+        font-size: 2.2rem;
+      }
     }
   }
   .second {
     display: grid;
-    grid-template-columns: repeat(4, 215px);
-    grid-template-rows: 200px;
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+    padding: 0px 5rem;
     place-content: center;
   }
 `;

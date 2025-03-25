@@ -18,6 +18,7 @@ const MainSection = styled.div`
   border: 2px solid #fff368;
   border-radius: 15px;
   cursor: pointer;
+  height: 15rem;
   background: linear-gradient(
       180deg,
       rgba(255, 243, 104, 0.5),
@@ -26,6 +27,9 @@ const MainSection = styled.div`
     ${(props) => css`url(${props.gymOffer})`};
   background-size: cover;
   transition: all 100ms ease-in;
+  @media (min-width: 1000px) {
+    height: 20rem;
+  }
   &:hover {
     scale: 1.05;
   }

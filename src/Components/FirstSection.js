@@ -17,10 +17,13 @@ const MainSection = styled.div`
   background-image: url(${gym2});
   background-repeat: no-repeat;
   background-size: cover;
-  height: 650px;
+  height: 100vh;
   width: 100vw;
   display: grid;
   place-content: center;
+  @media (max-width: 1400px) {
+    background-size: cover;
+  }
 
   h1 {
     ${css`
