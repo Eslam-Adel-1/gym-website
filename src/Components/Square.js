@@ -27,7 +27,7 @@ const MainSection = styled.div`
     ${(props) => css`url(${props.gymOffer})`};
   background-size: cover;
   transition: all 100ms ease-in;
-  @media (min-width: 1000px) {
+  @media (min-width: 1300px) {
     height: 20rem;
   }
   &:hover {

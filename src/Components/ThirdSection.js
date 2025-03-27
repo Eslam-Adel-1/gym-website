@@ -62,14 +62,14 @@ const MainSection = styled.div`
   .second {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 0px 5rem;
+    place-content: center;
     @media (max-width: 800px) {
       grid-template-columns: repeat(2, 1fr);
     }
     @media (max-width: 600px) {
       grid-template-columns: repeat(1, 1fr);
     }
-    gap: 15px;
-    padding: 0px 5rem;
-    place-content: center;
   }
 `;
