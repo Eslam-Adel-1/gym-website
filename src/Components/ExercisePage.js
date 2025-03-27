@@ -135,7 +135,7 @@ const ExercisePage = () => {
           })}
         </ul>
       </div>
-      <div>
+      <div className="gridContainer">
         {filteredData?.length !== 0 && (
           <>
             <div className="exercise_container">
@@ -177,8 +177,13 @@ const MainSection = styled.div`
   height: 100%;
   width: 100vw;
   margin-top: 100px;
-  /* padding: 10px; */
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .categories {
+    /* max-width: 1200px; */
     h1 {
       margin-bottom: 30px;
       margin-top: 30px;
@@ -248,6 +253,16 @@ const MainSection = styled.div`
     gap: 20px;
     padding: 0px 50px;
     margin-bottom: 15px;
+    max-width: 1200px;
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   .div_searchField {
     display: flex;

@@ -47,6 +47,7 @@ const MainSection = styled.div`
   width: 100vw;
   height: 100vh;
   margin: 30px 0px;
+
   .main-container {
     display: flex;
     align-items: center;
@@ -55,10 +56,13 @@ const MainSection = styled.div`
   }
   .container {
     flex: 0.6;
+    @media (max-width: 800px) {
+      flex: 1;
+    }
     color: whitesmoke;
     @import url("https://fonts.cdnfonts.com/css/outerspace-militia");
     font-family: "Outerspace Militia", sans-serif;
-    margin-left: 35px;
+    margin: 0px 30px;
     font-size: 30px;
     text-align: center;
     opacity: ${(props) => (props.intersect ? 1 : 0)};
@@ -71,6 +75,9 @@ const MainSection = styled.div`
       color: black;
       border-radius: 30px;
       margin-top: 30px;
+      @media (max-width: 800px) {
+        font-size: 20px;
+      }
     }
     h4 {
       @media (min-width: 1440px) {
@@ -86,5 +93,8 @@ const MainSection = styled.div`
     height: 100%;
     opacity: ${(props) => (props.intersect ? 1 : 0)};
     transition: all 900ms ease-in;
+    @media (max-width: 800px) {
+      display: none;
+    }
   }
 `;

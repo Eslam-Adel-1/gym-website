@@ -39,23 +39,35 @@ const MainSection = styled.div`
   @media (min-width: 1250px) {
     padding: 0px;
   }
+  @media (max-width: 800px) {
+    height: fit-content;
+    padding-bottom: 200px;
+  }
   .first {
     margin-bottom: 50px;
     margin-top: 50px;
     h1 {
       text-align: center;
-      font-size: 50px;
+      font-size: 2rem;
       @import url("https://fonts.cdnfonts.com/css/outerspace-militia");
       font-family: "Outerspace Militia", sans-serif;
       color: whitesmoke;
       @media (min-width: 1000px) {
         font-size: 2.2rem;
       }
+      @media (max-width: 800px) {
+      }
     }
   }
   .second {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     gap: 15px;
     padding: 0px 5rem;
     place-content: center;

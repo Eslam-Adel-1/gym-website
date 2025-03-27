@@ -117,13 +117,13 @@ const MainSection = styled.div`
     bottom: 0;
     right: 0;
     left: 0;
+    padding: 20px;
     background-color: rgba(1, 1, 1, 0.8);
     z-index: 1000;
     .button-trail {
       font-size: 15px;
       font-weight: 600;
       font-family: "Francois One", sans-serif;
-      /* font-family: "Protest Revolution", sans-serif; */
       background-color: #fff368;
       color: black;
       border-radius: 30px;
@@ -131,7 +131,6 @@ const MainSection = styled.div`
     }
     .container_instruction {
       p {
-        /* text-align: center; */
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         font-size: 15px;
@@ -142,18 +141,23 @@ const MainSection = styled.div`
   }
   .TheExercise {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
     padding: 55px;
     margin: 30px;
     border: 2px solid #fff386;
     border-radius: 15px;
+    @media (max-width: 1000px) {
+      flex-direction: column-reverse;
+    }
     img {
-      height: 400px;
+      height: 50%;
       border-radius: 15px;
+      max-width: 550px;
     }
     .TheExercise_Text {
       margin-right: 70px;
+      margin: 50px 0px;
+
       h1 {
         color: aliceblue;
         text-transform: capitalize;

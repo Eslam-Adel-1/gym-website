@@ -49,13 +49,6 @@ const Navbar = () => {
       <RightPart>
         <div className="second">
           <ul>
-            {/* <li onClick={playSong}>
-              {songPlayed ? (
-                <VolumeUpIcon className="volumeIIcon" />
-              ) : (
-                <VolumeOffIcon className="volumeIcon" />
-              )}
-            </li> */}
             <li
               onClick={() => {
                 navigate("exercise");
@@ -116,10 +109,6 @@ const LeftPart = styled.div`
     cursor: pointer;
     h1 {
       font-size: 22px;
-      /* font-weight: 900; */
-      /* font-family: "Trixie Regular", sans-serif; */
-      /* @import url("https://fonts.cdnfonts.com/css/trixie-2"); */
-
       @import url("https://fonts.cdnfonts.com/css/outerspace-militia");
       font-family: "Outerspace Militia", sans-serif;
 
@@ -143,15 +132,20 @@ const RightPart = styled.div`
       font-size: 11px;
       font-weight: 600;
       font-family: "Francois One", sans-serif;
-      /* font-family: "Protest Revolution", sans-serif; */
       background-color: #fff368;
       color: black;
       border-radius: 30px;
+      @media (max-width: 500px) {
+        display: none;
+      }
     }
     ul {
       display: flex;
       align-items: center;
       color: whitesmoke;
+      @media (max-width: 1024px) {
+        display: none;
+      }
       li {
         position: relative;
         font-size: 17px;
